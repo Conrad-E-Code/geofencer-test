@@ -4,13 +4,16 @@ import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
 export default function App() {
   return (
     <View style={styles.appContainer}>
-      <View style={styles.inputContainer}>
-        <TextInput style={styles.textInput} placeholder="Your Goal"/>
-        <Button title="add goal"/>
+      <View style={styles.firstBox}>
+        <Text>1</Text>
       </View>
-      <View>
-        <Text>Your list of goals...</Text>
+      <View style={styles.secondBox}>
+        <Text>2</Text>
       </View>
+      <View style={styles.thirdBox}>
+        <Text>3</Text>
+      </View>
+
     </View>
     
   );
@@ -19,19 +22,31 @@ export default function App() {
 const styles = StyleSheet.create({
   appContainer: {
     padding: 50,
-
-  },
-  inputContainer: {
-    flexDirection: "row",
-    justifyContent: 'space-between'
-
-  },
-  textInput: {
-    borderWidth: 1,
-    borderColor: 'grey',
+    flexDirection: 'row',
+    height: 300,
     width: '80%',
-    marginRight: 8
-  }
+    justifyContent: 'space-between',
+    alignItems: 'center'
+
+  },
+  firstBox: {
+    backgroundColor: "red",
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },  
+  secondBox: {
+    backgroundColor: "blue",
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  thirdBox: {
+    backgroundColor: "green",
+    flex: 3,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
 
 });
 
